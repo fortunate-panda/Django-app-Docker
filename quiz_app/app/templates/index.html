@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo-test Tech Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>Knowledge Check</h1>
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+        </header>
+
+        <main id="quiz-box">
+            <div class="question-container">
+                <h2 id="question-text">Question goes here?</h2>
+            </div>
+
+            <div class="options-container" id="options-box">
+                </div>
+
+            <div class="footer-nav">
+                <span id="question-number">01 / 10</span>
+                <button id="next-btn" class="btn hidden" onclick="nextQuestion()">Next Question &rarr;</button>
+            </div>
+        </main>
+
+        <div id="result-box" class="result-box hidden">
+            <div class="score-circle">
+                <span id="score-display">0</span>
+                <span class="total">/ 10</span>
+            </div>
+            <h2 id="result-message">Excellent Work</h2>
+            <p>You have completed the assessment.</p>
+            <button class="btn primary" onclick="restartQuiz()">Retake Quiz</button>
+        </div>
+    </div>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
